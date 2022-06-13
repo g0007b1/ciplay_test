@@ -55,7 +55,7 @@ const RegisterPage: FC<Props> = ({registerUser, showNot}) => {
                                 })} />
                         {errors.email && <p className={'invalid-feedback'}>{errors.email.message}</p>}
 
-                        <input className={'form-control ' + (errors.password ? 'is-invalid' : '')}
+                        <input type={'password'} className={'form-control ' + (errors.password ? 'is-invalid' : '')}
                                placeholder={'password'}
                                {...register("password",
                                    {
@@ -72,7 +72,7 @@ const RegisterPage: FC<Props> = ({registerUser, showNot}) => {
                                    })} />
                         {errors.password && <p className={'invalid-feedback'}>{errors.password.message}</p>}
 
-                        <input className={'form-control ' + (errors.repeatedPassword ? 'is-invalid' : '')}
+                        <input type={'password'} className={'form-control ' + (errors.repeatedPassword ? 'is-invalid' : '')}
                                placeholder={'repeat your password'}
                                {...register("repeatedPassword",
                                    {

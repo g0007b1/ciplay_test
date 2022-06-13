@@ -42,7 +42,7 @@ const ChangePasswordPage: FC<Props> = ({currentPassword, loggedIn, changePasswor
                 <h1 className={'card-header'}>CHANGE PASSWORD</h1>
                 <form className={'form-group'} onSubmit={handleSubmit(onSubmit)}>
 
-                    <input className={'form-control ' + (errors.oldPassword ? 'is-invalid' : '')}
+                    <input type={'password'} className={'form-control ' + (errors.oldPassword ? 'is-invalid' : '')}
                            placeholder={'password'}
                            {...register("oldPassword",
                                {
@@ -52,7 +52,7 @@ const ChangePasswordPage: FC<Props> = ({currentPassword, loggedIn, changePasswor
 
                     {errors.oldPassword && <p className={'invalid-feedback'}>{errors.oldPassword.message}</p>}
 
-                    <input className={'form-control ' + (errors.newPassword ? 'is-invalid' : '')}
+                    <input type={'password'} className={'form-control ' + (errors.newPassword ? 'is-invalid' : '')}
                            placeholder={'newPassword'}
                            {...register("newPassword",
                                {
@@ -73,7 +73,7 @@ const ChangePasswordPage: FC<Props> = ({currentPassword, loggedIn, changePasswor
                                })} />
                     {errors.newPassword && <p className={'invalid-feedback'}>{errors.newPassword.message}</p>}
 
-                    <input className={'form-control ' + (errors.repeatedPassword ? 'is-invalid' : '')}
+                    <input type={'password'} className={'form-control ' + (errors.repeatedPassword ? 'is-invalid' : '')}
                            placeholder={'repeat your password'}
                            {...register("repeatedPassword",
                                {

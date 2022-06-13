@@ -51,7 +51,7 @@ const LoginPage: FC<Props> = ({login, loggedIn,showNot}) => {
                                })} />
                     {errors.email && <p className={'invalid-feedback'}>{errors.email.message}</p>}
 
-                    <input className={'form-control ' + (errors.password ? 'is-invalid' : '')}
+                    <input type={'password'} className={'form-control ' + (errors.password ? 'is-invalid' : '')}
                            placeholder={'password'}
                            {...register("password",
                                {
