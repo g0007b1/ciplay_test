@@ -13,7 +13,7 @@ const initialState = {
 
 type initialStateType = typeof initialState;
 
-export const userReducer = (state = initialState, action:ActionsAuthType):initialStateType => {
+export const userReducer = (state = initialState, action:ActionsUserType):initialStateType => {
     switch (action.type) {
         case 'SET_USER_DATA': {
             return ({
@@ -59,8 +59,8 @@ export const userReducer = (state = initialState, action:ActionsAuthType):initia
     }
 }
 
-type ThunkType = BaseThunkType<ActionsAuthType>
-export type ActionsAuthType = InferActionsType<typeof userActions>
+type ThunkType = BaseThunkType<ActionsUserType>
+export type ActionsUserType = InferActionsType<typeof userActions>
 
 
 export const userActions = {
