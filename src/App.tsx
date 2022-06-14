@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import {RegisterPage} from "./components/RegisterPage";
+import {RegisterPage} from "./pages/RegisterPage";
 import {Navigate, Route, Routes} from "react-router-dom";
-import {HomePage} from "./components/HomePage";
-import {LoginPage} from "./components/LoginPage";
+import {HomePage} from "./pages/HomePage";
+import {LoginPage} from "./pages/LoginPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {ChangePasswordPage} from "./components/ChangePasswordPage";
+import {ChangePasswordPage} from "./pages/ChangePasswordPage";
 import {Navbar} from "./components/Navbar";
 
 function App() {
