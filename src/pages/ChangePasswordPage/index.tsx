@@ -43,7 +43,7 @@ const ChangePasswordPage: FC<Props> = ({currentPassword, loggedIn, changePasswor
                 <form className={'form-group'} onSubmit={handleSubmit(onSubmit)}>
 
                     <input type={'password'} className={'form-control ' + (errors.oldPassword ? 'is-invalid' : '')}
-                           placeholder={'password'}
+                           placeholder={'your old password'}
                            {...register("oldPassword",
                                {
                                    required: 'This field is required',
@@ -53,7 +53,7 @@ const ChangePasswordPage: FC<Props> = ({currentPassword, loggedIn, changePasswor
                     {errors.oldPassword && <p className={'invalid-feedback'}>{errors.oldPassword.message}</p>}
 
                     <input type={'password'} className={'form-control ' + (errors.newPassword ? 'is-invalid' : '')}
-                           placeholder={'newPassword'}
+                           placeholder={'new password'}
                            {...register("newPassword",
                                {
                                    required: 'This field is required',
@@ -83,7 +83,7 @@ const ChangePasswordPage: FC<Props> = ({currentPassword, loggedIn, changePasswor
                                })} />
                     {errors.repeatedPassword &&
                     <p className={'invalid-feedback'}>{errors.repeatedPassword.message}</p>}
-                    <input type="submit"/>
+                    <button className={'btn btn-primary'} type="submit">Login</button>
                 </form>
                 {showNot ? <div className={'alert alert-success'}> Success changed password! </div> : ''}
             </div>
